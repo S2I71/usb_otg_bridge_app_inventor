@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<cb:CODEBLOCKS xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://education.mit.edu/openblocks/ns http://education.mit.edu/openblocks/codeblocks.xsd" xmlns:cb="http://education.mit.edu/openblocks/ns">
+<Pages collapsible-pages="yes" drawer-with-page="yes">
+<Page page-color="128 128 128" page-drawer="Main" page-infullview="yes" page-name="Main" page-width="2054">
+<PageBlocks>
+<Block genus-name="subroutine" id="935">
+<Label>OFF</Label>
+<Location>
+<X>708</X>
+<Y>595</Y>
+</Location>
+<Comment>
+<Text>Copy this function and Add new Commands to control servo... sound....</Text>
+<Location>
+<X>529</X>
+<Y>702</Y>
+</Location>
+<BoxSize>
+<Width>169</Width>
+<Height>98</Height>
+</BoxSize>
+</Comment>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="926" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="926">
+<Location>
+<X>819</X>
+<Y>603</Y>
+</Location>
+<BeforeBlockId>935</BeforeBlockId>
+<AfterBlockId>423</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="927" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="423">
+<Location>
+<X>819</X>
+<Y>633</Y>
+</Location>
+<BeforeBlockId>926</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="921" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Teste" position-type="single"/>
+<BlockConnector con-block-id="427" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Alors exécute ..." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="427">
+<Location>
+<X>962</X>
+<Y>669</Y>
+</Location>
+<BeforeBlockId>423</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="428" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="429" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-low" id="429">
+<Location>
+<X>1236</X>
+<Y>696</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="427" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="428">
+<Label>13</Label>
+<Location>
+<X>1236</X>
+<Y>672</Y>
+</Location>
+<Comment>
+<Text>Turn LED 13 OFF</Text>
+<Location>
+<X>1315</X>
+<Y>661</Y>
+</Location>
+<BoxSize>
+<Width>183</Width>
+<Height>36</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="427" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal_digital" id="921">
+<Location>
+<X>965</X>
+<Y>636</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="423" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="922" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+<BlockConnector con-block-id="923" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="true" id="923">
+<Location>
+<X>1081</X>
+<Y>639</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="921" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_digital" id="922">
+<Label>Test</Label>
+<Location>
+<X>975</X>
+<Y>639</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="921" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="927">
+<Label>_ABVAR_2_Test=(Contains(_ABVAR_1_Input_Appinventor_String ,"OFF"));</Label>
+<Location>
+<X>889</X>
+<Y>606</Y>
+</Location>
+<Comment>
+<Text>Test if InputAppinventor contains "ON"</Text>
+<Location>
+<X>1414</X>
+<Y>593</Y>
+</Location>
+<BoxSize>
+<Width>231</Width>
+<Height>52</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="926" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="subroutine" id="934">
+<Label>ON</Label>
+<Location>
+<X>709</X>
+<Y>438</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="481" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="481">
+<Location>
+<X>798</X>
+<Y>446</Y>
+</Location>
+<BeforeBlockId>934</BeforeBlockId>
+<AfterBlockId>416</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="482" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="416">
+<Location>
+<X>798</X>
+<Y>476</Y>
+</Location>
+<BeforeBlockId>481</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="918" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Teste" position-type="single"/>
+<BlockConnector con-block-id="420" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Alors exécute ..." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="pin-write-digital" id="420">
+<Location>
+<X>941</X>
+<Y>512</Y>
+</Location>
+<BeforeBlockId>416</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="421" connector-kind="socket" connector-type="number" init-type="number" label="#" position-type="single"/>
+<BlockConnector con-block-id="422" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="digital-high" id="422">
+<Label>HIGH</Label>
+<Location>
+<X>1215</X>
+<Y>539</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="420" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="number" id="421">
+<Label>13</Label>
+<Location>
+<X>1215</X>
+<Y>515</Y>
+</Location>
+<Comment>
+<Text>Turn LED 13 ON</Text>
+<Location>
+<X>1306</X>
+<Y>507</Y>
+</Location>
+<BoxSize>
+<Width>173</Width>
+<Height>37</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="420" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="equal_digital" id="918">
+<Location>
+<X>944</X>
+<Y>479</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="416" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="919" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+<BlockConnector con-block-id="920" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="true" id="920">
+<Location>
+<X>1060</X>
+<Y>482</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="918" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_digital" id="919">
+<Label>Test</Label>
+<Location>
+<X>954</X>
+<Y>482</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="918" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="482">
+<Label>_ABVAR_2_Test=(Contains(_ABVAR_1_Input_Appinventor_String ,"ON"));</Label>
+<Location>
+<X>868</X>
+<Y>449</Y>
+</Location>
+<Comment>
+<Text>Test if InputAppinventor contains "ON"</Text>
+<Location>
+<X>1383</X>
+<Y>437</Y>
+</Location>
+<BoxSize>
+<Width>242</Width>
+<Height>56</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="481" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="subroutine" id="930">
+<Label>Read</Label>
+<Location>
+<X>710</X>
+<Y>307</Y>
+</Location>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="924" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="924">
+<Location>
+<X>813</X>
+<Y>315</Y>
+</Location>
+<BeforeBlockId>930</BeforeBlockId>
+<AfterBlockId>408</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="925" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="if" id="408">
+<Location>
+<X>813</X>
+<Y>345</Y>
+</Location>
+<BeforeBlockId>924</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="915" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Teste" position-type="single"/>
+<BlockConnector con-block-id="874" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Alors exécute ..." position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="874">
+<Location>
+<X>956</X>
+<Y>381</Y>
+</Location>
+<BeforeBlockId>408</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="875" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_msg" id="875">
+<Label>Serial.println ("Message from Arduino");</Label>
+<Location>
+<X>1026</X>
+<Y>384</Y>
+</Location>
+<Comment>
+<Text>Send Message to Android</Text>
+<Location>
+<X>1356</X>
+<Y>378</Y>
+</Location>
+<BoxSize>
+<Width>234</Width>
+<Height>35</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="874" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="equal_digital" id="915">
+<Location>
+<X>959</X>
+<Y>348</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="408" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="917" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+<BlockConnector con-block-id="916" connector-kind="socket" connector-type="boolean" init-type="boolean" label="" position-type="bottom"/>
+</Sockets>
+</Block>
+<Block genus-name="true" id="916">
+<Location>
+<X>1075</X>
+<Y>351</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="915" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_digital" id="917">
+<Label>Test</Label>
+<Location>
+<X>969</X>
+<Y>351</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="915" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="925">
+<Label>_ABVAR_2_Test=(Contains(_ABVAR_1_Input_Appinventor_String ,"Read"));</Label>
+<Location>
+<X>883</X>
+<Y>318</Y>
+</Location>
+<Comment>
+<Text>Test if InputAppinventor contains "Read"</Text>
+<Location>
+<X>1405</X>
+<Y>302</Y>
+</Location>
+<BoxSize>
+<Width>224</Width>
+<Height>52</Height>
+</BoxSize>
+</Comment>
+<Plug>
+<BlockConnector con-block-id="924" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="subroutine" id="393">
+<Label>serialEvent</Label>
+<Location>
+<X>7</X>
+<Y>380</Y>
+</Location>
+<Comment>
+<Text>When a serial event appear, this function read incomming message and can compare it.
+You can just change parts Read, ON, OFF or add new parts as you want</Text>
+<Location>
+<X>58</X>
+<Y>681</Y>
+</Location>
+<BoxSize>
+<Width>310</Width>
+<Height>120</Height>
+</BoxSize>
+</Comment>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="391" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Commands" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="391">
+<Location>
+<X>174</X>
+<Y>388</Y>
+</Location>
+<BeforeBlockId>393</BeforeBlockId>
+<AfterBlockId>394</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="392" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="394">
+<Location>
+<X>174</X>
+<Y>418</Y>
+</Location>
+<BeforeBlockId>391</BeforeBlockId>
+<AfterBlockId>398</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="395" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_loop" id="398">
+<Location>
+<X>174</X>
+<Y>448</Y>
+</Location>
+<BeforeBlockId>394</BeforeBlockId>
+<AfterBlockId>931</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="399" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="subroutine-ref" id="931">
+<Label>Read</Label>
+<Location>
+<X>174</X>
+<Y>478</Y>
+</Location>
+<BeforeBlockId>398</BeforeBlockId>
+<AfterBlockId>932</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="932">
+<Label>ON</Label>
+<Location>
+<X>174</X>
+<Y>502</Y>
+</Location>
+<BeforeBlockId>931</BeforeBlockId>
+<AfterBlockId>933</AfterBlockId>
+</Block>
+<Block genus-name="subroutine-ref" id="933">
+<Label>OFF</Label>
+<Location>
+<X>174</X>
+<Y>526</Y>
+</Location>
+<BeforeBlockId>932</BeforeBlockId>
+<AfterBlockId>468</AfterBlockId>
+</Block>
+<Block genus-name="code_loop" id="468">
+<Location>
+<X>174</X>
+<Y>550</Y>
+</Location>
+<BeforeBlockId>933</BeforeBlockId>
+<AfterBlockId>457</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="469" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="setter_variable_String" id="457">
+<Location>
+<X>174</X>
+<Y>580</Y>
+</Location>
+<BeforeBlockId>468</BeforeBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="458" connector-kind="socket" connector-type="string" init-type="string" label="Nom de la variable" position-type="single"/>
+<BlockConnector con-block-id="879" connector-kind="socket" connector-type="string" init-type="string" label="Valeur" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="glue_msg" id="879">
+<Label>""</Label>
+<Location>
+<X>446</X>
+<Y>607</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="457" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="variable_String" id="458">
+<Label>Input_Appinventor_String</Label>
+<Location>
+<X>446</X>
+<Y>583</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="457" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="469">
+<Label>}</Label>
+<Location>
+<X>244</X>
+<Y>553</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="468" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="399">
+<Label>_ABVAR_1_Input_Appinventor_String += inChar;</Label>
+<Location>
+<X>244</X>
+<Y>451</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="398" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="395">
+<Label>char inChar = (char)Serial.read();</Label>
+<Location>
+<X>244</X>
+<Y>421</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="394" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="392">
+<Label>while (Serial.available()) {</Label>
+<Location>
+<X>244</X>
+<Y>391</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="391" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="program" id="371">
+<Location>
+<X>7</X>
+<Y>30</Y>
+</Location>
+<Comment>
+<Text>Don't change this part, but you can add own setup informations</Text>
+<Location>
+<X>862</X>
+<Y>37</Y>
+</Location>
+<BoxSize>
+<Width>216</Width>
+<Height>87</Height>
+</BoxSize>
+</Comment>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="387" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Programme d'installation (setup)" position-type="single"/>
+<BlockConnector con-block-id="406" connector-kind="socket" connector-type="cmd" init-type="cmd" label="Boucle" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="406">
+<Location>
+<X>303</X>
+<Y>337</Y>
+</Location>
+<BeforeBlockId>371</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="407" connector-kind="socket" connector-type="number" init-type="number" label="Millisecondes" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="407">
+<Label>10</Label>
+<Location>
+<X>495</X>
+<Y>340</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="406" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="setter_variable_String" id="387">
+<Location>
+<X>304</X>
+<Y>38</Y>
+</Location>
+<BeforeBlockId>371</BeforeBlockId>
+<AfterBlockId>404</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="388" connector-kind="socket" connector-type="string" init-type="string" label="Nom de la variable" position-type="single"/>
+<BlockConnector con-block-id="386" connector-kind="socket" connector-type="string" init-type="string" label="Valeur" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_setup" id="404">
+<Location>
+<X>304</X>
+<Y>92</Y>
+</Location>
+<BeforeBlockId>387</BeforeBlockId>
+<AfterBlockId>471</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="405" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_head" id="471">
+<Location>
+<X>304</X>
+<Y>122</Y>
+</Location>
+<BeforeBlockId>404</BeforeBlockId>
+<AfterBlockId>473</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="472" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_head" id="473">
+<Location>
+<X>304</X>
+<Y>152</Y>
+</Location>
+<BeforeBlockId>471</BeforeBlockId>
+<AfterBlockId>475</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="474" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_head" id="475">
+<Location>
+<X>304</X>
+<Y>182</Y>
+</Location>
+<BeforeBlockId>473</BeforeBlockId>
+<AfterBlockId>477</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="476" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="code_head" id="477">
+<Location>
+<X>304</X>
+<Y>212</Y>
+</Location>
+<BeforeBlockId>475</BeforeBlockId>
+<AfterBlockId>483</AfterBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="478" connector-kind="socket" connector-type="string" init-type="string" label="" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="setter_variable_digital" id="483">
+<Location>
+<X>304</X>
+<Y>242</Y>
+</Location>
+<BeforeBlockId>477</BeforeBlockId>
+<AfterBlockId>872</AfterBlockId>
+<Sockets num-sockets="2">
+<BlockConnector con-block-id="484" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Nom de la variable" position-type="single"/>
+<BlockConnector con-block-id="502" connector-kind="socket" connector-type="boolean" init-type="boolean" label="Valeur" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="delay" id="872">
+<Location>
+<X>304</X>
+<Y>296</Y>
+</Location>
+<BeforeBlockId>483</BeforeBlockId>
+<Sockets num-sockets="1">
+<BlockConnector con-block-id="873" connector-kind="socket" connector-type="number" init-type="number" label="Millisecondes" position-type="single"/>
+</Sockets>
+</Block>
+<Block genus-name="number" id="873">
+<Label>200</Label>
+<Location>
+<X>496</X>
+<Y>299</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="872" connector-kind="plug" connector-type="number" init-type="number" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="false" id="502">
+<Location>
+<X>652</X>
+<Y>269</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="483" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="variable_digital" id="484">
+<Label>Test</Label>
+<Location>
+<X>652</X>
+<Y>245</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="483" connector-kind="plug" connector-type="boolean" init-type="boolean" label="" position-type="mirror"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="478">
+<Label>if (s.substring(i) == search) return true;  } return false;    }</Label>
+<Location>
+<X>500</X>
+<Y>215</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="477" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="476">
+<Label>for (int i=0; i&lt;= max; i++){</Label>
+<Location>
+<X>500</X>
+<Y>185</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="475" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="474">
+<Label>int max = s.length() - search.length();</Label>
+<Location>
+<X>500</X>
+<Y>155</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="473" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="472">
+<Label>bool Contains( String s, String search) {</Label>
+<Location>
+<X>500</X>
+<Y>125</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="471" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="405">
+<Label>Serial.begin(115200);</Label>
+<Location>
+<X>556</X>
+<Y>95</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="404" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="glue_msg" id="386">
+<Label>""</Label>
+<Location>
+<X>576</X>
+<Y>65</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="387" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="single"/>
+</Plug>
+</Block>
+<Block genus-name="variable_String" id="388">
+<Label>Input_Appinventor_String</Label>
+<Location>
+<X>576</X>
+<Y>41</Y>
+</Location>
+<Plug>
+<BlockConnector con-block-id="387" connector-kind="plug" connector-type="string" init-type="string" label="" position-type="mirror"/>
+</Plug>
+</Block>
+</PageBlocks>
+</Page>
+</Pages>
+</cb:CODEBLOCKS>
