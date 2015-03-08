@@ -11,7 +11,7 @@ const int ledPin = 13;
 int Valeur = 0 ;
 
 void setup() {
-  Serial.begin(115200);
+  Serial.begin(57600);
     // Pin 13 has an LED connected on most Arduino boards:
   pinMode(ledPin, OUTPUT);
   Input_Appinventor_String.reserve(200);
